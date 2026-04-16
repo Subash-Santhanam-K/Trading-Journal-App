@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0B0E14;
+    color: #D1D4DC;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+
+  /* Reusable Trading Components */
+  .badge-profit {
+    background-color: rgba(0, 192, 135, 0.1);
+    color: #00C087;
+    border: 1px solid rgba(0, 192, 135, 0.2);
+    @apply px-2 py-0.5 rounded text-sm font-medium;
+  }
+
+  .badge-loss {
+    background-color: rgba(255, 74, 104, 0.1);
+    color: #FF4A68;
+    border: 1px solid rgba(255, 74, 104, 0.2);
+    @apply px-2 py-0.5 rounded text-sm font-medium;
+  }
+
+  .input-standard {
+    @apply w-full bg-trading-dark border border-trading-border rounded-lg px-4 py-2.5 text-trading-text focus:outline-none focus:border-trading-primary focus:ring-1 focus:ring-trading-primary transition-all;
+  }
+
+  .btn-primary {
+    @apply w-full bg-trading-primary hover:bg-trading-primaryHover text-white font-medium py-2.5 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .trading-card {
+    @apply bg-trading-card border border-trading-border rounded-xl shadow-lg;
+  }
+}
+
+/* Custom Scrollbar for sleekness */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2E39;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3E49;
+}
