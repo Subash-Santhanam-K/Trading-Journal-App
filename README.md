@@ -67,10 +67,10 @@ npm install
 ```
 Configure your `.env` securely:
 ```env
-DATABASE_URL=postgresql://neondb_owner:npg_m4EUCcAilYS8@ep-dawn-silence-amgtramv-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+DATABASE_URL=your_database_url
 PORT=5000
-JWT_SECRET=supersecretkey
-JWT_REFRESH_SECRET=supersecretrefreshkey
+JWT_SECRET=your_jwt_secret
+JWT_REFRESH_SECRET=your_refresh_secret
 ```
 Start the core:
 ```bash
